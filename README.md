@@ -6,7 +6,6 @@ Seja bem-vindo ao meu repositório de estudos da MBA de FullStack! Aqui comparti
 
 ## Navegação 📜
 
-- [Sobre o MBA](#sobre-a-mba)
 - [Módulos](#módulos)
 - [Tecnologias](#tecnologias)
 - [Progresso](#progresso)
