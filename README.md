@@ -4,7 +4,7 @@
 
 Seja bem-vindo ao meu repositório de estudos da MBA de FullStack! Aqui compartilho informações sobre os módulos do curso, as tecnologias que estou aprendendo e o meu progresso ao longo desta jornada.
 
-## Navegação 📜
+## Sumário 📜
 
 - [Módulos](#módulos)
 - [Tecnologias](#tecnologias)
