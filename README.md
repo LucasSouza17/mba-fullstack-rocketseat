@@ -42,7 +42,10 @@ A MBA de FullStack é uma especialização abrangente que foca no desenvolviment
 ## Progresso 📈
 
 - [ ] Módulo 1: Fundamentos do Desenvolvimento Web
-- [ ] Aguardando liberação dos próximos módulos
+- [ ] Módulo 2: Desenvolvimento Front-end Web
+- [ ] Módulo 3: Desenvolvimento Back-end
+- [ ] Módulo 4: Desenvolvimento Mobile
+- [ ] Módulo 5: Soft skills do profissional Fullstack
 - **Previsão de Conclusão:** Maio de 2025
 
 ## Sobre o Autor 👨‍💻
