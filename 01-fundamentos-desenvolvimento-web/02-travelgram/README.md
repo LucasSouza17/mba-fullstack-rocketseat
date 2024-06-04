@@ -1,7 +1,6 @@
 # Travelgram | Perfil de viagens
 
-
-Este é um projeto que visa criar uma página dedicada à apresentação de uma receita de cupcake. Desenvolvido com HTML e CSS responsivo, o site oferece uma interface elegante e funcional, fornecendo instruções passo a passo para a preparação do cupcake.
+Este projeto visa criar uma página dedicada ao perfil de um viajante na plataforma Travelgram. Desenvolvido com HTML e CSS utilizando Flexbox, o site oferece uma interface elegante e funcional, apresentando as viagens e fotos do usuário de maneira organizada e visualmente atraente.
 
 [FIGMA](https://www.figma.com/community/file/1360315496868719817/perfil-de-viagens) 
 
