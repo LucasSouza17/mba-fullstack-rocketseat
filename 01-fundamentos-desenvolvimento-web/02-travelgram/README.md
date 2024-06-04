@@ -1,4 +1,4 @@
-# Página de receitas
+# Travelgram | Perfil de viagens
 
 
 Este é um projeto que visa criar uma página dedicada à apresentação de uma receita de cupcake. Desenvolvido com HTML e CSS responsivo, o site oferece uma interface elegante e funcional, fornecendo instruções passo a passo para a preparação do cupcake.
