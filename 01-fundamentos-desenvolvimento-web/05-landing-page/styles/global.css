@@ -19,8 +19,8 @@
   --stroke-color: #27272a;
   --text-color-primary: #f4f4f5;
   --text-color-secondary: #a1a1aa;
-  --brand-color-primary: ■#f7b733;
-  --brand-color-secondary: 口#FC4A1A;
+  --brand-color-primary: #f7b733;
+  --brand-color-secondary: #FC4A1A;
 
   --ff-sans: 'Inter', system-ui, sans-serif;
   --fw-base: 400;
@@ -32,6 +32,12 @@
   --fs-lg: 1.25rem;
   --fs-xl: 1.5rem;
   --fs-2xl: 2.5rem;
+
+  --py-base: 1rem;
+  --py-lg: 1.5rem;
+  --py-xl: 3rem;
+
+  --px-lg: 1.5rem;
 }
 
 html {
@@ -40,10 +46,15 @@ html {
   font-size: var(--fs-base);
   line-height: 1.6;
   color: var(--text-color-primary);
+
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 h1,
@@ -72,8 +83,20 @@ a {
   color: inherit;
 }
 
+a:hover {
+  background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 ul[role='list'] {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
 }
 
 @media (width >=80em) {
@@ -81,5 +104,11 @@ ul[role='list'] {
     --fs-lg: 2rem;
     --fs-xl: 3rem;
     --fs-2xl: 4rem;
+
+    --py-base: 1.5rem;
+    --py-lg: 2.5rem;
+    --py-xl: 5rem;
+
+    --px-lg: 2rem;
   }
 }
