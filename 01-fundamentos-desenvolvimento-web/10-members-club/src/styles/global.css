@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Catamaran", sans-serif;
+  font-size: 1rem;
+
+  --main-pink: rgba(214, 88, 179, 1);
+  --main-green: rgba(69, 180, 66, 1);
+  --base-white: rgba(255, 255, 255, 1);
+  --base-gray-100: rgba(244, 241, 242, 1);
+  --base-gray-200: rgba(233, 231, 233, 1);
+  --base-gray-300: rgba(223, 220, 223, 1);
+  --base-gray-400: rgba(206, 202, 205, 1);
+  --base-gray-500: rgba(117, 108, 113, 1);
+  --base-gray-600: rgba(74, 68, 72, 1);
+  --base-gray-700: rgba(51, 43, 49, 1);
+
+  --body-text-md: 1rem;
+}
+
+body {
+  background-color: var(--base-gray-200);
+  color: var(--base-gray-600);
+}
+
+.container {
+  width: 100%;
+  max-width: 1020px;
+  height: 100vh;
+  
+  margin: 0 auto;
+
+  overflow: hidden;
+}

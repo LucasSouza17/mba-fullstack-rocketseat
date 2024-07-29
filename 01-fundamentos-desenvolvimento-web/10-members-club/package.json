@@ -1,6 +1,6 @@
 {
-  "name": "09-hairday",
-  "description": "Aplicação web para agendamento de corte de cabelo.",
+  "name": "10-members-club",
+  "description": "Aplicação web responsiva de um Cartão fidelidade",
   "author": "Lucas Fernando de Souza",
   "scripts": {
     "build": "webpack",
