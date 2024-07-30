@@ -5,6 +5,7 @@ import "./libs/dayjs.js";
 
 // CSS
 import "./styles/global.css";
+import "./styles/utility.css";
 import "./styles/header-form.css";
 import "./styles/user-card.css";
 

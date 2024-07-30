@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Members Club</title>
+  </head>
 
-  <title>Members Club</title>
-</head>
+  <body>
+    <div class="container">
+      <!-- Form para busca do cartão de fidelidade -->
+      <form action="">
+        <header class="flex-col">
+          <img src="src/assets/logo.png" alt="Members club logo" />
 
-<body>
-  <div class="container">
-    <!-- Form para busca do cartão de fidelidade -->
-    <form action="">
-      <header>
-        <img src="src/assets/logo.png" alt="Members club logo">
+          <div class="input-wrapper flex-row">
+            <input
+              type="text"
+              name="member-id"
+              id="member-id"
+              placeholder="ID do cartão"
+            />
+            <button type="submit" id="button-input-submit" disabled>
+              <img src="src/assets/arrow-elbow-down-left.svg" alt="Pesquisar" />
+            </button>
+          </div>
+        </header>
+      </form>
 
-        <div class="input-wrapper">
-          <input type="text" name="member-id" id="member-id" placeholder="ID do cartão">
-          <button type="submit" id="button-input-submit" disabled>
-            <img src="src/assets/arrow-elbow-down-left.svg" alt="Pesquisar">
-          </button>
+      <!-- Grid de dashboard do detalhes do membro -->
+      <div class="dashboard-wrapper flex-row" id="dashboard-wrapper">
+        <!-- Informações do membro -->
+        <div class="user-wrapper flex-col" id="user-wrapper">
+          <!-- <div class="user-card">
+            <div class="user-image">
+              <img src="https://github.com/lucassouza17.png" alt="" />
+            </div>
+            <div class="user-info">
+              <strong>Lucas Souza</strong>
+              <span>Cliente desde 18/09/2023</span>
+            </div>
+          </div> -->
+
+          <!-- <div>Histórico de corte</div> -->
         </div>
-      </header>
-    </form>
 
-    <!-- Grid de dashboard do detalhes do membro -->
-    <div>
-      <div class="user-card">
-        <div class="user-image">
-          <img src="https://github.com/lucassouza17.png" alt="">
-        </div>
-        <div class="user-info">
-          <strong>Lucas Souza</strong>
-          <span>Cliente desde 18/09/2023</span>
+        <div class="fidelity-wrapper flex-col flex-1">
+          <div>Cartão fidelidade</div>
+          <div>Cortes restantes</div>
         </div>
       </div>
     </div>
-
-  </div>
-</body>
-
+  </body>
 </html>

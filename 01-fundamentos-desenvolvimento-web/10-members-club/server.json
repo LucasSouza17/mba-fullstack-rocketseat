@@ -2,7 +2,8 @@
   "clients": [
     {
       "id": "124-537-835-230",
-      "name": "Natália Miranda",
+      "name": "Lucas Souza",
+      "userImage": "https://github.com/lucassouza17.png",
       "clientSince": "18/09/2023",
       "appointmentHistory": [
         {"date": "29/04/2024", "time": "18:30"},
@@ -21,6 +22,7 @@
     {
       "id": "207-245-699-104",
       "name": "Capitão Nascimento",
+      "userImage": "https://github.com/capitao-nascimento.png",
       "clientSince": "12/04/2023",
       "appointmentHistory": [
         {"date": "01/05/2024", "time": "10:00"},
@@ -37,6 +39,7 @@
     {
       "id": "523-114-876-908",
       "name": "Sansão",
+      "userImage": "https://github.com/sansao.png",
       "clientSince": "15/07/2023",
       "appointmentHistory": [
         {"date": "22/04/2024", "time": "16:00"},

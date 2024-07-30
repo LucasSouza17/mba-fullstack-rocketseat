@@ -1,4 +1,5 @@
 import { getMember } from "../../services/get-member.js";
+import { memberInfoLoad } from "../member-info/load.js";
 
 const form = document.querySelector("form");
 const memberId = document.getElementById("member-id");
@@ -34,7 +35,15 @@ form.onsubmit = async (event) => {
       return alert("Membro não encontrado");
     }
 
+    const memberInfo = {
+      id: member.id,
+      name: member.name,
+      userImage: member.userImage,
+      clientSince: member.clientSince,
+    }
+
     // Load member dashboard
+    memberInfoLoad(memberInfo)
   } catch (error) {
     alert("Não foi possível carregar os dados do membro");
     console.log(error)

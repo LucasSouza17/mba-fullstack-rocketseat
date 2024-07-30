@@ -39,3 +39,18 @@ body {
 
   overflow: hidden;
 }
+
+.dashboard-wrapper {
+  gap: 1.5rem;
+  margin-top: 3rem;
+
+  & .user-wrapper {
+    width: 100%;
+    max-width: 20rem;
+    gap: 1rem;
+  }
+
+  & .fidelity-wrapper {
+    gap: 1rem;
+  }
+}
