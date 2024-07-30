@@ -7,6 +7,7 @@
 :root {
   font-family: "Catamaran", sans-serif;
   font-size: 1rem;
+  line-height: 140%;
 
   --main-pink: rgba(214, 88, 179, 1);
   --main-green: rgba(69, 180, 66, 1);
@@ -19,7 +20,9 @@
   --base-gray-600: rgba(74, 68, 72, 1);
   --base-gray-700: rgba(51, 43, 49, 1);
 
+  --title-text-sm: 1.25rem;
   --body-text-md: 1rem;
+  --body-text-xs: 0.75rem;
 }
 
 body {
@@ -31,7 +34,7 @@ body {
   width: 100%;
   max-width: 1020px;
   height: 100vh;
-  
+
   margin: 0 auto;
 
   overflow: hidden;
