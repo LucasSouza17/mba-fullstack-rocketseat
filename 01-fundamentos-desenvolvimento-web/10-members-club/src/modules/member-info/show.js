@@ -1,11 +1,8 @@
-// Seleciona as sessões: Manhã, Tarde e Noite
-const userWrapper = document.getElementById("user-wrapper");
+// Seleciona o container da info do membro
+const dashboardWrapper = document.getElementById("dashboard-wrapper");
 
 export function memberInfoShow({ memberData }) {
   try {
-    // Limpa as listas
-    userWrapper.innerHTML = ""
-
     // Cria os elementos das informações do membro
     const userCard = document.createElement("div")
     userCard.classList.add("user-card")
@@ -34,7 +31,7 @@ export function memberInfoShow({ memberData }) {
     userCard.append(userImageWrapper, userInfoWrapper)
 
     // Adiciona o card de usuário
-    userWrapper.append(userCard)
+    dashboardWrapper.append(userCard)
   } catch (error) {
     console.log(error)
   }

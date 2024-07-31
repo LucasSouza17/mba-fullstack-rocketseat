@@ -34,7 +34,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1020px;
+  max-width: 912px;
   height: 100vh;
 
   margin: 0 auto;
@@ -43,16 +43,28 @@ body {
 }
 
 .dashboard-wrapper {
+  display: grid;
+  grid-template-areas: 
+  "user-card cuts-stamps cuts-stamps"
+  "cuts-history cuts-stamps cuts-stamps"
+  "cuts-history cuts-remaining cuts-remaining"
+  ;
+
   gap: 1.5rem;
   margin-top: 3rem;
+}
 
-  & .user-wrapper {
-    width: 100%;
-    max-width: 20rem;
-    gap: 1rem;
-  }
+@media (width <= 57em) {
+  .dashboard-wrapper {
+    grid-template-areas: 
+    "user-card"
+    "cuts-stamps"
+    "cuts-remaining"
+    "cuts-history"
+    ;
 
-  & .member-fidelity-wrapper {
-    gap: 1rem;
+    padding: 0.75rem;
+
+    margin-top: 0.75rem;
   }
 }

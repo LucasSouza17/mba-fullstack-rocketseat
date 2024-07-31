@@ -1,5 +1,6 @@
 header {
   gap: 2rem;
+  flex-direction: column;
 
   margin-top: 1.5rem;
 
@@ -74,4 +75,11 @@ header img {
     filter: brightness(1.3);
     cursor: pointer;
   }
+}
+
+@media (width <= 57em) {
+  .input-wrapper {
+    max-width: 100%;
+  } 
+
 }

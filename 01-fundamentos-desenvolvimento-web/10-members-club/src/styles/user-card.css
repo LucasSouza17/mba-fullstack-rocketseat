@@ -1,4 +1,6 @@
 .user-card {
+  grid-area: user-card;
+
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -9,7 +9,8 @@ import "./styles/utility.css";
 import "./styles/header-form.css";
 import "./styles/user-card.css";
 import "./styles/cuts-remaining.css";
-import "./styles/fidelity-stamps.css";
+import "./styles/cuts-stamps.css";
+import "./styles/cuts-history.css";
 
 // JS
 import "./modules/page-load.js"

@@ -1,11 +1,5 @@
-.flex-col {
+.flex {
   display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
 }
 
 .flex-1 {

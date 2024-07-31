@@ -1,0 +1,9 @@
+.cuts-history {
+    grid-area: cuts-history;
+  
+    padding: 1rem;
+    background-color: var(--base-gray-100);
+  
+    border: 1px solid var(--base-gray-300);
+    border-radius: 1rem;
+  }

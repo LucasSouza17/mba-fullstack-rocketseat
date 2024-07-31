@@ -1,4 +1,6 @@
-.stamps-wrapper {
+.cuts-stamps {
+  grid-area: cuts-stamps;
+
   padding: 1rem;
   background-color: var(--base-gray-100);
 

@@ -1,13 +1,14 @@
 import { getMember } from "../../services/get-member.js";
+import { cutsRemainingLoad } from "../cuts-remaining/load.js";
 import { memberInfoLoad } from "../member-info/load.js";
 
 const form = document.querySelector("form");
 const memberId = document.getElementById("member-id");
 const memberIdPattern = /^\d{3}-\d{3}-\d{3}-\d{3}$/;
 const buttonSubmit = document.getElementById("button-input-submit");
+const dashboardWrapper = document.getElementById("dashboard-wrapper");
 
 memberId.oninput = (event) => {
-  console.log("oi")
   if (memberId.value !== "") {
     buttonSubmit.removeAttribute("disabled");
   } else {
@@ -20,10 +21,11 @@ form.onsubmit = async (event) => {
   event.preventDefault();
 
   try {
+    // Limpa os dados do dashboard
+    dashboardWrapper.innerHTML = "";
+
     // Recupera o id do membro
     const memberIdValue = memberId.value.trim();
-
-
 
     if (!memberIdPattern.test(memberIdValue)) {
       return alert("Id de membro inválido");
@@ -42,8 +44,13 @@ form.onsubmit = async (event) => {
       clientSince: member.clientSince,
     }
 
+    const cutsInfo = {
+      ...member.loyaltyCard
+    }
+
     // Load member dashboard
     memberInfoLoad(memberInfo)
+    cutsRemainingLoad(cutsInfo)
   } catch (error) {
     alert("Não foi possível carregar os dados do membro");
     console.log(error)
