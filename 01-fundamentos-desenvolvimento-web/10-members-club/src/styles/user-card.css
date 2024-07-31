@@ -21,7 +21,7 @@
     height: 60px;
     border-radius: 0.75rem;
     padding: 2px;
-    background: linear-gradient(90deg, #2daa6e 0%, #2daaaa 33%, #856ccf 67%, #d658b3 100%);
+    background: var(--gradient-primary);
 
     & img {
       width: 100%;

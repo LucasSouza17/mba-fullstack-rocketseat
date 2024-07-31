@@ -12,6 +12,7 @@
   --main-pink: rgba(214, 88, 179, 1);
   --main-green: rgba(69, 180, 66, 1);
   --base-white: rgba(255, 255, 255, 1);
+  --gradient-primary: linear-gradient(90deg, #2daa6e 0%, #2daaaa 33%, #856ccf 67%, #d658b3 100%);
   --base-gray-100: rgba(244, 241, 242, 1);
   --base-gray-200: rgba(233, 231, 233, 1);
   --base-gray-300: rgba(223, 220, 223, 1);
@@ -21,6 +22,7 @@
   --base-gray-700: rgba(51, 43, 49, 1);
 
   --title-text-sm: 1.25rem;
+  --title-text-md: 1.5rem;
   --body-text-md: 1rem;
   --body-text-xs: 0.75rem;
 }
@@ -50,7 +52,7 @@ body {
     gap: 1rem;
   }
 
-  & .fidelity-wrapper {
+  & .member-fidelity-wrapper {
     gap: 1rem;
   }
 }

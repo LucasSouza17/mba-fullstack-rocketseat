@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Members Club</title>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet" />
 
-  <body>
-    <div class="container">
-      <!-- Form para busca do cartão de fidelidade -->
-      <form action="">
-        <header class="flex-col">
-          <img src="src/assets/logo.png" alt="Members club logo" />
+  <title>Members Club</title>
+</head>
 
-          <div class="input-wrapper flex-row">
-            <input
-              type="text"
-              name="member-id"
-              id="member-id"
-              placeholder="ID do cartão"
-            />
-            <button type="submit" id="button-input-submit" disabled>
-              <img src="src/assets/arrow-elbow-down-left.svg" alt="Pesquisar" />
-            </button>
-          </div>
-        </header>
-      </form>
+<body>
+  <div class="container">
+    <!-- Form para busca do cartão de fidelidade -->
+    <form action="">
+      <header class="flex-col align-center justify-center">
+        <img src="src/assets/logo.png" alt="Members club logo" />
 
-      <!-- Grid de dashboard do detalhes do membro -->
-      <div class="dashboard-wrapper flex-row" id="dashboard-wrapper">
-        <!-- Informações do membro -->
-        <div class="user-wrapper flex-col" id="user-wrapper">
-          <!-- <div class="user-card">
+        <div class="input-wrapper flex-row">
+          <input type="text" name="member-id" id="member-id" placeholder="ID do cartão" />
+          <button type="submit" id="button-input-submit" disabled>
+            <img src="src/assets/arrow-elbow-down-left.svg" alt="Pesquisar" />
+          </button>
+        </div>
+      </header>
+    </form>
+
+    <!-- Grid de dashboard do detalhes do membro -->
+    <div class="dashboard-wrapper flex-row" id="dashboard-wrapper">
+      <!-- Informações do membro -->
+      <div class="user-wrapper flex-col" id="user-wrapper">
+        <!-- <div class="user-card">
             <div class="user-image">
               <img src="https://github.com/lucassouza17.png" alt="" />
             </div>
@@ -49,14 +42,26 @@
             </div>
           </div> -->
 
-          <!-- <div>Histórico de corte</div> -->
+        <!-- <div>Histórico de corte</div> -->
+      </div>
+
+      <div class="member-fidelity-wrapper flex-col flex-1">
+        <div class="stamps-wrapper flex-col flex-1">
+          Cartão fidelidade
         </div>
 
-        <div class="fidelity-wrapper flex-col flex-1">
-          <div>Cartão fidelidade</div>
-          <div>Cortes restantes</div>
+        <div class="cuts-remaining-wrapper flex-row align-center space-between">
+          <div class="cuts-remaining">
+            <p><strong>3</strong> cortes restantes</p>
+            <progress max="100" value="60"></progress>
+          </div>
+          <div class="pin-wrapper">
+            <img src="src/assets/pin-gift.svg" alt="gift pin">
+          </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
