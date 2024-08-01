@@ -5,6 +5,38 @@
   line-height: 140%;
 }
 
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #DFDCDF;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #DFDCDF;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #DFDCDF;
+}
+
 :root {
   font-family: "Oxygen", sans-serif;
   font-size: 1rem;
@@ -44,27 +76,33 @@ body {
 
 .dashboard-wrapper {
   display: grid;
+  grid-template-columns: 20rem 1fr 1fr;
   grid-template-areas:
     "user-card cuts-stamps cuts-stamps"
-    "cuts-history cuts-stamps cuts-stamps"
+    "cuts-history cuts-stamps  cuts-stamps"
     "cuts-history cuts-remaining cuts-remaining"
   ;
 
-  gap: 1.5rem;
-  margin-top: 3rem;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 @media (width <=57em) {
+  .container {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
   .dashboard-wrapper {
-    grid-template-areas:
-      "user-card"
-      "cuts-stamps"
-      "cuts-remaining"
-      "cuts-history"
-    ;
+    display: flex;
+    flex-direction: column;
 
-    padding: 0.75rem;
-
-    margin-top: 0.75rem;
+    padding-inline: 0.75rem;
+    padding-bottom: 0.75rem;
+    gap: 1rem;
+    margin-top: 2rem;
   }
 }

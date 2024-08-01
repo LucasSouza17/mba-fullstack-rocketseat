@@ -13,5 +13,4 @@ import "./styles/cuts-stamps.css";
 import "./styles/cuts-history.css";
 
 // JS
-import "./modules/page-load.js"
 import "./modules/form/submit.js"

@@ -1,6 +1,7 @@
 import { getMember } from "../../services/get-member.js";
 import { cutsHistoryLoad } from "../cuts-history/load.js";
 import { cutsRemainingLoad } from "../cuts-remaining/load.js";
+import { cutsStampsLoad } from "../cuts-stamps/load.js";
 import { memberInfoLoad } from "../member-info/load.js";
 
 const form = document.querySelector("form");
@@ -54,8 +55,15 @@ form.onsubmit = async (event) => {
       history: member.appointmentHistory
     }
 
+    const cutsStamps = {
+      id: member.id,
+      cutsNeeded: member.loyaltyCard.cutsNeeded,
+      totalCuts: member.loyaltyCard.totalCuts
+    }
+
     // Load member dashboard
     memberInfoLoad(memberInfo)
+    cutsStampsLoad(cutsStamps)
     cutsRemainingLoad(cutsInfo)
     cutsHistoryLoad(cutsHistory)
   } catch (error) {

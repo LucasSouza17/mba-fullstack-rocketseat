@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <title>Members Club</title>
+  </head>
 
-  <title>Members Club</title>
-</head>
+  <body>
+    <div class="container">
+      <!-- Form para busca do cartão de fidelidade -->
+      <form action="">
+        <header class="flex align-center justify-center">
+          <img src="src/assets/logo.png" alt="Members club logo" />
 
-<body>
-  <div class="container">
-    <!-- Form para busca do cartão de fidelidade -->
-    <form action="">
-      <header class="flex align-center justify-center">
-        <img src="src/assets/logo.png" alt="Members club logo" />
+          <div class="input-wrapper flex">
+            <input
+              type="text"
+              name="member-id"
+              id="member-id"
+              placeholder="ID do cartão"
+            />
+            <button type="submit" id="button-input-submit" disabled>
+              <img src="src/assets/arrow-elbow-down-left.svg" alt="Pesquisar" />
+            </button>
+          </div>
+        </header>
+      </form>
 
-        <div class="input-wrapper flex">
-          <input type="text" name="member-id" id="member-id" placeholder="ID do cartão" />
-          <button type="submit" id="button-input-submit" disabled>
-            <img src="src/assets/arrow-elbow-down-left.svg" alt="Pesquisar" />
-          </button>
-        </div>
-      </header>
-    </form>
-
-    <!-- Grid de dashboard do detalhes do membro -->
-    <div class="dashboard-wrapper" id="dashboard-wrapper">
-      <!-- Informações do membro -->
-      <!-- <div class="user-card"> -->
-      <!-- <div class="user-image">
+      <!-- Grid de dashboard do detalhes do membro -->
+      <div class="dashboard-wrapper" id="dashboard-wrapper">
+        <!-- Informações do membro -->
+        <!-- <div class="user-card">
+          <div class="user-image">
             <img src="https://github.com/lucassouza17.png" alt="" />
           </div>
           <div class="user-info">
             <strong>Lucas Souza</strong>
             <span>Cliente desde 18/09/2023</span>
-          </div> -->
-      <!-- </div> -->
-
-      <!-- histórico de cortes -->
-      <!-- <div class="cuts-history">
-        <div class="history-header">
-          <p>HISTÓRICO</p>
-          <span>7 cortes</span>
-        </div>
-        <div class="history-list">
-          <div class="history-item">
-            <div class="history-info">
-              <p>18/09/2023</p>
-              <span>17:00</span>
-            </div>
-            <img src="src/assets/pin-check.svg" alt="Selo check">
           </div>
-        </div>
-      </div> -->
+        </div> -->
 
-      <!-- <div class="cuts-stamps">Selos de fidelidade</div> -->
+        <!-- Histórico de corte -->
+        <!-- <div class="cuts-history">
+          <div class="history-info-wrapper">
+            <div class="history-header">
+              <p>HISTÓRICO</p>
+              <span>7 cortes</span>
+            </div>
+            <div class="history-list">
+              <div class="history-item">
+                <div class="history-info">
+                  <p>18/09/2023</p>
+                  <span>17:00</span>
+                </div>
+                <img src="src/assets/pin-check.svg" alt="Selo check" />
+              </div>
+            </div>
+          </div>
+        </div> -->
 
-      <!-- Informações de cortes restantes -->
-      <!-- <div class="cuts-progress">
+        <!-- Informações dos selos adquiridos -->
+        <!-- <div class="cuts-stamps">
+          <div class="stamps-header">
+            <div class="stamps-info">
+              <p>CARTÃO FIDELIDADE</p>
+              <span>Ao fazer cortes de cabelo, o décimo sai de graça!</span>
+            </div>
+            <div class="user-id">ID: 124-537-835-230</div>
+          </div>
+
+          <div class="stamps-list">
+            <div class="stamps-item">
+              <img src="src/assets/pin-check-stamp.png" alt="stamp" />
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Informações de cortes restantes -->
+        <!-- <div class="cuts-progress">
           <div class="progress-info">
             <p><strong>3</strong> cortes restantes</p>
             <progress max="100" value="60"></progress>
           </div>
           <div class="pin-wrapper">
-            <img src="src/assets/pin-gift.svg" alt="gift pin">
+            <img src="src/assets/pin-gift.svg" alt="gift pin" />
           </div>
         </div> -->
-
-      <!-- <div>Histórico de corte</div> -->
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

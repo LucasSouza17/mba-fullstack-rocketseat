@@ -78,8 +78,12 @@ header img {
 }
 
 @media (width <= 57em) {
+  header {
+    padding: 0 0.75rem;
+  }
+
   .input-wrapper {
+    width: 100%;
     max-width: 100%;
   } 
-
 }
