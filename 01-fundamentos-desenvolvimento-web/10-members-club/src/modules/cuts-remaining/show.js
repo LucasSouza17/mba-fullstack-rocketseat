@@ -1,14 +1,14 @@
-// Seleciona wrapper dos cortes restantes
+// Seleciona o wrapper do dashboard
 const dashboardWrapper = document.getElementById("dashboard-wrapper");
 
 export function cutsRemainingShow({ cutsInfo }) {
-    // Criar elemento da informação de cortes restantes
-    const cutsRemainingInfo = document.createElement("div");
-    cutsRemainingInfo.classList.add("cuts-progress");
+  // Criar elemento da informação de cortes restantes
+  const cutsRemainingInfo = document.createElement("div");
+  cutsRemainingInfo.classList.add("cuts-progress");
 
-    const percentageCutsCompleted = (cutsInfo.totalCuts / cutsInfo.cutsNeeded) * 100;
+  const percentageCutsCompleted = (cutsInfo.totalCuts / cutsInfo.cutsNeeded) * 100;
 
-    cutsRemainingInfo.innerHTML = `
+  cutsRemainingInfo.innerHTML = `
         <div class="progress-info">
             <p><strong>${cutsInfo.cutsRemaining}</strong> cortes restantes</p>
             <progress max="100" value="${percentageCutsCompleted}"></progress>
@@ -18,8 +18,8 @@ export function cutsRemainingShow({ cutsInfo }) {
         </div>
     `;
 
-    const progress = cutsRemainingInfo.querySelector("progress");
-    progress.setAttribute("data-content-remaining", `${cutsInfo.totalCuts} de ${cutsInfo.cutsNeeded}`);
+  const progress = cutsRemainingInfo.querySelector("progress");
+  progress.setAttribute("data-content-remaining", `${cutsInfo.totalCuts} de ${cutsInfo.cutsNeeded}`);
 
-    dashboardWrapper.append(cutsRemainingInfo);
+  dashboardWrapper.append(cutsRemainingInfo);
 }

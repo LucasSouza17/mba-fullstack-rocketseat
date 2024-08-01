@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 140%;
 }
 
 :root {
-  font-family: "Catamaran", sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-size: 1rem;
-  line-height: 140%;
 
   --main-pink: rgba(214, 88, 179, 1);
   --main-green: rgba(69, 180, 66, 1);
@@ -44,23 +44,23 @@ body {
 
 .dashboard-wrapper {
   display: grid;
-  grid-template-areas: 
-  "user-card cuts-stamps cuts-stamps"
-  "cuts-history cuts-stamps cuts-stamps"
-  "cuts-history cuts-remaining cuts-remaining"
+  grid-template-areas:
+    "user-card cuts-stamps cuts-stamps"
+    "cuts-history cuts-stamps cuts-stamps"
+    "cuts-history cuts-remaining cuts-remaining"
   ;
 
   gap: 1.5rem;
   margin-top: 3rem;
 }
 
-@media (width <= 57em) {
+@media (width <=57em) {
   .dashboard-wrapper {
-    grid-template-areas: 
-    "user-card"
-    "cuts-stamps"
-    "cuts-remaining"
-    "cuts-history"
+    grid-template-areas:
+      "user-card"
+      "cuts-stamps"
+      "cuts-remaining"
+      "cuts-history"
     ;
 
     padding: 0.75rem;

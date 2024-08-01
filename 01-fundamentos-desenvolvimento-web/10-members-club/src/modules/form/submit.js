@@ -1,4 +1,5 @@
 import { getMember } from "../../services/get-member.js";
+import { cutsHistoryLoad } from "../cuts-history/load.js";
 import { cutsRemainingLoad } from "../cuts-remaining/load.js";
 import { memberInfoLoad } from "../member-info/load.js";
 
@@ -48,9 +49,15 @@ form.onsubmit = async (event) => {
       ...member.loyaltyCard
     }
 
+    const cutsHistory = {
+      totalCuts: member.loyaltyCard.totalCuts,
+      history: member.appointmentHistory
+    }
+
     // Load member dashboard
     memberInfoLoad(memberInfo)
     cutsRemainingLoad(cutsInfo)
+    cutsHistoryLoad(cutsHistory)
   } catch (error) {
     alert("Não foi possível carregar os dados do membro");
     console.log(error)
