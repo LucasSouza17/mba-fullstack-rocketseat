@@ -3,6 +3,7 @@ import { cutsHistoryLoad } from "../cuts-history/load.js";
 import { cutsRemainingLoad } from "../cuts-remaining/load.js";
 import { cutsStampsLoad } from "../cuts-stamps/load.js";
 import { memberInfoLoad } from "../member-info/load.js";
+import { modalWinCutLoad } from "../modal-win-cut/load.js";
 
 const form = document.querySelector("form");
 const memberId = document.getElementById("member-id");
@@ -16,7 +17,7 @@ memberId.oninput = (event) => {
   } else {
     buttonSubmit.setAttribute("disabled", true);
   }
-}
+};
 
 form.onsubmit = async (event) => {
   // Previnir o envio do formulário
@@ -44,30 +45,34 @@ form.onsubmit = async (event) => {
       name: member.name,
       userImage: member.userImage,
       clientSince: member.clientSince,
-    }
+    };
 
     const cutsInfo = {
-      ...member.loyaltyCard
-    }
+      ...member.loyaltyCard,
+    };
 
     const cutsHistory = {
       totalCuts: member.loyaltyCard.totalCuts,
-      history: member.appointmentHistory
-    }
+      history: member.appointmentHistory,
+    };
 
     const cutsStamps = {
       id: member.id,
       cutsNeeded: member.loyaltyCard.cutsNeeded,
-      totalCuts: member.loyaltyCard.totalCuts
+      totalCuts: member.loyaltyCard.totalCuts,
+    };
+
+    if (member.loyaltyCard.totalCuts === member.loyaltyCard.cutsNeeded) {
+      modalWinCutLoad();
     }
 
     // Load member dashboard
-    memberInfoLoad(memberInfo)
-    cutsStampsLoad(cutsStamps)
-    cutsRemainingLoad(cutsInfo)
-    cutsHistoryLoad(cutsHistory)
+    memberInfoLoad(memberInfo);
+    cutsStampsLoad(cutsStamps);
+    cutsRemainingLoad(cutsInfo);
+    cutsHistoryLoad(cutsHistory);
   } catch (error) {
     alert("Não foi possível carregar os dados do membro");
-    console.log(error)
+    console.log(error);
   }
-}
+};

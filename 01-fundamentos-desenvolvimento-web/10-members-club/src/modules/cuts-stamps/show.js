@@ -15,7 +15,7 @@ export function cutsStampsShow({ cutsStamps }) {
         <p>CARTÃO FIDELIDADE</p>
         <span>Ao fazer cortes de cabelo, o décimo sai de graça!</span>
       </div>
-      <div class="user-id">ID: 124-537-835-230</div>
+      <div class="user-id">ID: ${cutsStamps.id}</div>
     </div>
     <div class="stamps-list">
     ${totalStampsArray.map((_, index) => {
@@ -24,8 +24,11 @@ export function cutsStampsShow({ cutsStamps }) {
       ${index + 1 <= cutsStamps.totalCuts ? (
         `<img src="src/assets/pin-check-stamp.png" alt="stamp" />`
       ) : (
-        `<div></div>`
+        ''
       )}
+      ${index + 1 === cutsStamps.cutsNeeded && cutsStamps.totalCuts < cutsStamps.cutsNeeded ? (
+        `<img src="src/assets/gift-gray.svg" alt="gift to achieve" style="width: 48px; height: 48px;" />`
+      ) : ''}
       </div>
       `
     }).join('')}

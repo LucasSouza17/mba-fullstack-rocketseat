@@ -1,0 +1,67 @@
+.overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 3px solid var(--main-pink);
+  box-shadow: 0 0 15rem var(--main-pink);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  width: min(96%, 40rem);
+
+  background-color: var(--base-gray-100);
+
+  text-align: center;
+
+  & strong {
+    font-size: var(--title-text-lg);
+    font-weight: bold;
+    color: var(--main-pink);
+  }
+
+  & p {
+    font-size: var(--body-text-md);
+    color: var(--base-gray-500);
+  }
+
+  & button {
+    appearance: none;
+    border: none;
+
+    margin-top: 2rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--main-pink);
+    color: var(--base-gray-100);
+    font-size: var(--body-text-md);
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}

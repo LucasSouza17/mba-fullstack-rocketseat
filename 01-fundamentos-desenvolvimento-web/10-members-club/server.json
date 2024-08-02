@@ -42,15 +42,19 @@
       "userImage": "https://i.pinimg.com/474x/7f/ac/e9/7face9a2078caac6b2e74fe379d4592b.jpg",
       "clientSince": "15/07/2023",
       "appointmentHistory": [
+        {"date": "30/07/2024", "time": "16:00"},
+        {"date": "30/04/2024", "time": "16:00"},
+        {"date": "29/04/2024", "time": "16:00"},
+        {"date": "25/04/2024", "time": "16:00"},
         {"date": "22/04/2024", "time": "16:00"},
         {"date": "18/03/2024", "time": "16:30"},
         {"date": "24/01/2024", "time": "17:45"},
         {"date": "20/12/2023", "time": "15:15"}
       ],
       "loyaltyCard": {
-        "totalCuts": 5,
+        "totalCuts": 8,
         "cutsNeeded": 8,
-        "cutsRemaining": 3
+        "cutsRemaining": 0
       }
     }
   ]

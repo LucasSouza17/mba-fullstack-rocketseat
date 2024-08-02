@@ -52,7 +52,7 @@
       color: var(--base-gray-500);
       content: attr(data-content-remaining);
       position: absolute;
-      right: -2.5rem;
+      right: -3rem;
       top: -0.4rem;
     }
 
