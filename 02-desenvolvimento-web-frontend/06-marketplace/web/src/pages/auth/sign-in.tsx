@@ -36,7 +36,8 @@ export function SignIn() {
     try {
       await authenticate(data)
 
-      toast.success('Enviamos um link de autenticação para seu e-mail.')
+      navigate('/')
+      toast.success('Autenticado com sucesso.')
     } catch {
       toast.error('Credenciais inválidas.')
     }
@@ -44,7 +45,7 @@ export function SignIn() {
 
   return (
     <div className="flex flex-col w-full h-full rounded-[32px] bg-shape-white px-20 py-[72px]">
-      <form className="flex flex-col gap-12" onSubmit={handleSubmit(handleSignIn)}>
+      <form className="flex flex-col gap-12 mb-20" onSubmit={handleSubmit(handleSignIn)}>
 
         <div className="flex flex-col gap-2">
           <h1 className="text-title-md font-sans">Acesse sua conta</h1>
@@ -56,13 +57,13 @@ export function SignIn() {
           <Input id="password" type="password" placeholder="Sua senha de acesso" icon="LockKeyhole" label="Senha" error={errors.password?.message} {...register('password')} />
         </div>
 
-        <Button className="w-full" disabled={isSubmitting}>Acessar <ArrowRight /></Button>
+        <Button className="w-full" size="lg" disabled={isSubmitting}>Acessar <ArrowRight /></Button>
       </form>
 
       <div className="flex flex-col gap-5 mt-auto">
         <span className="text-body-md font-poppins text-grayscale-300">Ainda não tem uma conta?</span>
-        <Button variant="outline" onClick={() => navigate('/sign-up')}>Cadastrar <ArrowRight /></Button>
+        <Button variant="outline" size="lg" onClick={() => navigate('/sign-up')}>Cadastrar <ArrowRight /></Button>
       </div>
-    </div>
+    </div >
   )
 }

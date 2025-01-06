@@ -11,7 +11,8 @@ const buttonVariants = cva(
           'border border-orange-base text-orange-base bg-transparent hover:border-orange-dark hover:text-orange-dark',
       },
       size: {
-        default: 'h-14 px-5',
+        lg: 'h-14 px-5',
+        default: 'h-10 px-4',
       },
     },
     defaultVariants: {

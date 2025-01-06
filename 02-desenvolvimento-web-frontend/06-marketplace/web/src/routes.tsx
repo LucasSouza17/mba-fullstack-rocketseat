@@ -5,13 +5,19 @@ import { SignIn } from './pages/auth/sign-in'
 import { NotFound } from './pages/404'
 import { Error } from './pages/error'
 import { SignUp } from './pages/auth/sign-up'
+import { AppLayout } from './pages/_layouts/app'
+import { Dashboard } from './pages/app/dashboard/dashboard'
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    // element: <AppLayout />,
+    element: <AppLayout />,
     errorElement: <Error />,
     children: [
+      {
+        path: '/',
+        element: <Dashboard />,
+      }
     ],
   },
   {

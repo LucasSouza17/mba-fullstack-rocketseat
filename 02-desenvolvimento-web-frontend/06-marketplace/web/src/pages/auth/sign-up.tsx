@@ -96,12 +96,12 @@ export function SignUp() {
           <Input id="passwordConfirmation" type="password" placeholder="Confirme a senha" icon="LockKeyhole" label="Confirmar senha" error={errors.passwordConfirmation?.message} {...register('passwordConfirmation')} />
         </div>
 
-        <Button className="w-full" disabled={isSubmitting} onClick={handleSubmit(handleSignUp)}>Cadastrar <ArrowRight /></Button>
+        <Button className="w-full" size="lg" disabled={isSubmitting} onClick={handleSubmit(handleSignUp)}>Cadastrar <ArrowRight /></Button>
       </form>
 
       <div className="flex flex-col gap-5 mt-auto">
         <span className="text-body-md font-poppins text-grayscale-300">Já tem uma conta?</span>
-        <Button variant="outline" onClick={() => navigate('/sign-in')}>Acessar <ArrowRight /></Button>
+        <Button variant="outline" size="lg" onClick={() => navigate('/sign-in')}>Acessar <ArrowRight /></Button>
       </div>
     </div>
   )
