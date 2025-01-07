@@ -34,7 +34,7 @@ export function AppLayout() {
     <div className="flex min-h-screen flex-col antialiased bg-shape-background">
       <Header />
 
-      <div className="max-w-screen-2xl w-full mx-auto flex flex-1 flex-col gap-4  p-8 pt-6">
+      <div className="max-w-[1366px] w-full mx-auto flex flex-1 flex-col gap-4  p-8 pt-6">
         <Outlet />
       </div>
     </div>

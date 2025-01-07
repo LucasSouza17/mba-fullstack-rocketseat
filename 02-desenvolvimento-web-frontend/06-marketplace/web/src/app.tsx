@@ -1,5 +1,11 @@
 import './index.css'
 
+import dayjs from "dayjs";
+import "dayjs/locale/pt-br";
+
+
+dayjs.locale("pt-br");
+
 import { RouterProvider } from 'react-router-dom'
 import { Toaster } from 'sonner'
 import { router } from './routes'
