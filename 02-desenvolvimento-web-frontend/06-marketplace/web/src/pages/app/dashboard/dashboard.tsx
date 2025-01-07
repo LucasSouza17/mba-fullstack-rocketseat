@@ -1,9 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
+import dayjs from "dayjs";
+
 import { DashboardCardInfo } from "./dashboard-card-info";
 import { VisitorsChart } from "./visitors-chart";
 import { GetNumberOfProductsSoldBySellerIn30Days } from "../../../api/get-number-of-products-sold-by-seller-in-30-days";
 import { GetNumberOfProductsAvailableIn30Days } from "../../../api/get-number-of-products-available-in-30-days";
 import { GetNumberOfViewsReceivedIn30Days } from "../../../api/get-number-of-views-received-in-30-days";
+import { getViewsPerDayBySellerIn30Days } from "../../../api/get-views-per-day-by-seller-in-30-days";
+import Icon from "../../../components/icon";
 
 export function Dashboard() {
   const { data: numberOfProductsSold } = useQuery({
@@ -20,6 +24,13 @@ export function Dashboard() {
     queryKey: ['metrics', 'views-in-30-days'],
     queryFn: GetNumberOfViewsReceivedIn30Days
   })
+
+  const { data: viewsPerDay } = useQuery({
+    queryKey: ['metrics', 'visitors'],
+    queryFn: getViewsPerDayBySellerIn30Days
+  })
+
+  const formattedViewsPerDay = dayjs(viewsPerDay?.viewsPerDay[0]?.date).format("DD [de] MMMM") + ' - ' + dayjs(viewsPerDay?.viewsPerDay[viewsPerDay?.viewsPerDay.length - 1]?.date).format("DD [de] MMMM")
 
   return (
     <div className="flex flex-col gap-10 mt-16">
@@ -43,7 +54,10 @@ export function Dashboard() {
           <div className="flex flex-col gap-7">
             <div className="flex items-center justify-between">
               <p className="text-title-sm font-sans text-grayscale-500">Visitantes</p>
-              <span>data</span>
+              <div className="flex items-center gap-2">
+                <Icon name="Calendar" size={16} className="text-blue-dark" />
+                <span className="text-body-sm text-grayscale-300 font-poppins">{formattedViewsPerDay}</span>
+              </div>
             </div>
 
             <VisitorsChart />
