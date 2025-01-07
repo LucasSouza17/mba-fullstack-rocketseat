@@ -5,7 +5,7 @@ import { AlertCircle, icons } from "lucide-react"
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   icon?: keyof typeof icons
-  label: string
+  label?: string
   error?: string
 }
 

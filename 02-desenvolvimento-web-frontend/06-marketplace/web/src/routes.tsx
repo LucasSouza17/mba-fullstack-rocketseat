@@ -7,6 +7,7 @@ import { Error } from './pages/error'
 import { SignUp } from './pages/auth/sign-up'
 import { AppLayout } from './pages/_layouts/app'
 import { Dashboard } from './pages/app/dashboard/dashboard'
+import { Products } from './pages/app/products/products'
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Dashboard />,
+      },
+      {
+        path: '/products',
+        element: <Products />,
       }
     ],
   },
