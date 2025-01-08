@@ -1,6 +1,14 @@
+import { useQuery } from "@tanstack/react-query";
 import { FilterProductsForm } from "./filter-products-form";
+import { getSellerProducts } from "../../../api/get-seller-products";
+import { ProductCard } from "./product-card";
 
 export function Products() {
+  const { data } = useQuery({
+    queryKey: ['products', 'me'],
+    queryFn: getSellerProducts
+  })
+
   return (
     <div className="flex flex-col gap-10 mt-16">
       <div className="flex flex-col gap-2">
@@ -11,8 +19,10 @@ export function Products() {
       <div className="flex gap-6">
         <FilterProductsForm />
 
-        <div className="grid grid-cols-2 gap-4">
-
+        <div className="grid w-full grid-cols-3 gap-4">
+          {data?.products.map(product => (
+            <ProductCard key={product.id} {...product} />
+          ))}
         </div>
       </div>
     </div>

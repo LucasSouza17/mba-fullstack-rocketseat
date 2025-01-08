@@ -63,7 +63,7 @@ export function FilterProductsForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(handleSearch)} className="bg-shape-white rounded-[20px] p-6 max-w-[327px] w-full">
+    <form onSubmit={handleSubmit(handleSearch)} className="bg-shape-white rounded-[20px] p-6 max-w-[327px] h-min w-full">
       <p className="text-title-sm font-sans text-grayscale-300">Filtrar</p>
 
       <div className="flex flex-col mt-6 gap-5">
