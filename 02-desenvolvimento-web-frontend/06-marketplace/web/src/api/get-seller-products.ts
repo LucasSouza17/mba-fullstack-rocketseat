@@ -24,8 +24,18 @@ export interface GetSellerProductsResponse {
   products: SellerProduct[]
 }
 
-export async function getSellerProducts(): Promise<GetSellerProductsResponse> {
-  const response = await api.get('/products/me')
+export interface GetSellerProductsParams {
+  search?: string
+  status?: 'available' | 'sold' | 'cancelled'
+}
+
+export async function getSellerProducts({ search, status }: GetSellerProductsParams): Promise<GetSellerProductsResponse> {
+  const response = await api.get('/products/me', {
+    params: {
+      search,
+      status
+    }
+  })
 
   return response.data
 }

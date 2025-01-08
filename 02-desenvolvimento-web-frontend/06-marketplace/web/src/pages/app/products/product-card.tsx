@@ -16,7 +16,7 @@ export function ProductCard({ ...product }: SellerProduct) {
 
 
   return (
-    <div className="flex flex-col bg-shape-white rounded-2xl p-1 gap-1">
+    <div className="flex flex-col bg-shape-white rounded-2xl p-1 gap-1 border-2 border-transparent transition-colors hover:border-blue-base hover:cursor-pointer">
       <div className="relative">
         <img src={product.attachments[0].url} alt="" className="h-36 object-cover w-full rounded-2xl" />
         <div className="flex items-center gap-1 absolute top-2 right-2">

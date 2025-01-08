@@ -2,11 +2,17 @@ import { useQuery } from "@tanstack/react-query";
 import { FilterProductsForm } from "./filter-products-form";
 import { getSellerProducts } from "../../../api/get-seller-products";
 import { ProductCard } from "./product-card";
+import { useSearchParams } from "react-router-dom";
 
 export function Products() {
+  const [searchParams] = useSearchParams()
+
+  const search = searchParams.get('search') ?? undefined
+  const status = searchParams.get('status') as 'available' | 'sold' | 'cancelled' ?? undefined
+
   const { data } = useQuery({
-    queryKey: ['products', 'me'],
-    queryFn: getSellerProducts
+    queryKey: ['products', 'me', search, status],
+    queryFn: () => getSellerProducts({ search, status }),
   })
 
   return (
