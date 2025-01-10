@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
 import Icon from "./icon";
-import { ChevronDown, ChevronUp, icons, X } from "lucide-react";
+import { AlertCircle, ChevronDown, ChevronUp, icons, X } from "lucide-react";
 
 interface SelectProps {
   label?: string;
@@ -29,7 +29,7 @@ export const Select = ({ label, icon, options, error, onChange, value = null }: 
           onClick={() => setIsOpen(!isOpen)}
         >
           {icon && <Icon className={cn("w-6 h-6", { "text-orange-base": isOpen })} name={icon} />}
-          <span className={cn("w-full text-body-md font-normal normal-case", selected ? "text-grayscale-400" : "text-grayscale-200")}>{labelSelected || "Selecione"}</span>
+          <span className={cn("w-full !text-body-md font-normal normal-case", selected ? "text-grayscale-400" : "text-grayscale-200")}>{labelSelected || "Selecione"}</span>
           {selected && (
             <div className="flex items-center rounded-full bg-shape-shape justify-center p-0.5 w-[20px] h-[20px] transition-all hover:filter hover:brightness-90">
               <X size={16} className="cursor-pointer rounded-full text-grayscale-300" onClick={(e) => {
@@ -43,7 +43,7 @@ export const Select = ({ label, icon, options, error, onChange, value = null }: 
           {isOpen ? <ChevronUp className="w-6 h-6 text-grayscale-300" /> : <ChevronDown className="w-6 h-6 text-grayscale-300" />}
         </div>
         {isOpen && (
-          <ul className="absolute w-full mt-2 py-1 bg-white text-body-sm font-poppins drop-shadow-md rounded-md overflow-hidden">
+          <ul className="absolute w-full mt-2 py-1 bg-white max-h-60 text-body-sm font-poppins drop-shadow-md rounded-md overflow-auto">
             {options.map((option, index) => (
               <li
                 key={index}
@@ -64,7 +64,10 @@ export const Select = ({ label, icon, options, error, onChange, value = null }: 
           </ul>
         )}
       </label>
-      {error && <p className="text-body-xs text-semantic-danger normal-case mt-2">{error}</p>}
+      {error && <div className="flex items-center gap-1 py-2">
+        <AlertCircle className="w-4 h-4 text-semantic-danger" />
+        <span className="text-body-xs text-semantic-danger normal-case">{error}</span>
+      </div>}
     </div>
   );
 };

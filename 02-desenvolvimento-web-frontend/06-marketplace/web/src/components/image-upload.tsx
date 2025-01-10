@@ -6,6 +6,8 @@ import { z } from "zod";
 interface ImageUploadProps {
   onFileSelect: (file: File | null) => void;
   error?: string;
+  label?: string;
+  className?: string;
 }
 
 const imageValidationSchema = z.object({
@@ -16,7 +18,7 @@ const imageValidationSchema = z.object({
 });
 
 
-export function ImageUpload({ onFileSelect, error }: ImageUploadProps) {
+export function ImageUpload({ onFileSelect, label, className, error }: ImageUploadProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [validationError, setValidationError] = useState<string | null>(null);
@@ -45,7 +47,7 @@ export function ImageUpload({ onFileSelect, error }: ImageUploadProps) {
         onClick={() => inputRef?.current?.click()}
         className={
           cn(
-            "flex flex-col justify-center items-center w-[120px] h-[120px] bg-shape-background rounded-xl cursor-pointer",
+            "flex flex-col justify-center items-center w-[120px] h-[120px] bg-shape-shape rounded-xl cursor-pointer", className
           )
         }
       >
@@ -63,14 +65,24 @@ export function ImageUpload({ onFileSelect, error }: ImageUploadProps) {
               alt="preview"
               className="absolute w-full h-full object-cover rounded-xl"
             />
-            <div className="group absolute flex items-center justify-center w-full h-full z-10 rounded-xl transition-colors hover:bg-black/60">
+            <div className="group absolute flex flex-col gap-4 items-center justify-center w-full h-full z-10 rounded-xl transition-colors hover:bg-black/60">
               <LucideUpload className="w-8 h-8 text-shape-white hidden group-hover:block" />
+              {label && (
+                <span className="text-center text-body-sm font-poppins text-shape-white hidden group-hover:block">{label}</span>
+              )}
             </div>
           </div>
         )}
-        {!preview && <LucideUpload className="w-8 h-8 text-orange-base" />}
+        {!preview && (
+          <div className="flex flex-col gap-4 items-center justify-center">
+            <LucideUpload className="w-8 h-8 text-orange-base" />
+            {label && (
+              <span className="text-center text-body-sm font-poppins text-grayscale-300">{label}</span>
+            )}
+          </div>
+        )}
       </div>
-      {validationError && <div className="flex items-center gap-1 py-2">
+      {(validationError || error) && <div className="flex items-center gap-1 py-2">
         <AlertCircle className="w-4 h-4 text-semantic-danger" />
         <span className="text-body-xs text-semantic-danger normal-case">{validationError ?? error}</span>
       </div>}

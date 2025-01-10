@@ -73,7 +73,7 @@ export function SignUp() {
 
   return (
     <div className="flex flex-col w-full h-[calc(100vh-48px)] overflow-y-auto rounded-[32px] bg-shape-white px-20 py-[72px]">
-      <form className="flex flex-col gap-12 mb-20" onSubmit={handleSubmit(() => { })}>
+      <form className="flex flex-col gap-12 mb-20" onSubmit={handleSubmit(handleSignUp)}>
 
         <div className="flex flex-col gap-2">
           <h1 className="text-title-md font-sans">Crie sua conta</h1>
@@ -96,7 +96,7 @@ export function SignUp() {
           <Input id="passwordConfirmation" type="password" placeholder="Confirme a senha" icon="LockKeyhole" label="Confirmar senha" error={errors.passwordConfirmation?.message} {...register('passwordConfirmation')} />
         </div>
 
-        <Button className="w-full" size="lg" disabled={isSubmitting} onClick={handleSubmit(handleSignUp)}>Cadastrar <ArrowRight /></Button>
+        <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>Cadastrar <ArrowRight /></Button>
       </form>
 
       <div className="flex flex-col gap-5 mt-auto">
