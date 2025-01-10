@@ -112,7 +112,7 @@ export function NewProductForm() {
         </div>
 
         <div className="flex items-center gap-3 mt-10">
-          <Button type="submit" size="lg" variant="outline" className="w-full justify-center">Cancelar</Button>
+          <Button type="submit" size="lg" variant="outline" className="w-full justify-center" onClick={() => navigate(-1)}>Cancelar</Button>
           <Button size="lg" className="w-full justify-center" disabled={isSubmitting}>Salvar e publicar</Button>
         </div>
       </div>
