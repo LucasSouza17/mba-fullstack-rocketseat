@@ -9,6 +9,7 @@ import { AppLayout } from './pages/_layouts/app'
 import { Dashboard } from './pages/app/dashboard/dashboard'
 import { Products } from './pages/app/products/products'
 import { NewProduct } from './pages/app/new-product/new-product'
+import { UpdateProduct } from './pages/app/update-product/update-product'
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: '/products/new',
         element: <NewProduct />
+      },
+      {
+        path: '/products/:id',
+        element: <UpdateProduct />
       }
     ],
   },

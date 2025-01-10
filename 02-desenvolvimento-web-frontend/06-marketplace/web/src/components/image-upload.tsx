@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { cn } from "../lib/utils"
 import { AlertCircle, LucideUpload } from "lucide-react"
 import { z } from "zod";
@@ -8,6 +8,7 @@ interface ImageUploadProps {
   error?: string;
   label?: string;
   className?: string;
+  defaultValue?: string | null;
 }
 
 const imageValidationSchema = z.object({
@@ -18,10 +19,16 @@ const imageValidationSchema = z.object({
 });
 
 
-export function ImageUpload({ onFileSelect, label, className, error }: ImageUploadProps) {
+export function ImageUpload({ onFileSelect, label, defaultValue = null, className, error }: ImageUploadProps) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [preview, setPreview] = useState<string | null>(null);
+  const [preview, setPreview] = useState<string | null>(defaultValue);
   const [validationError, setValidationError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (defaultValue) {
+      setPreview(defaultValue);
+    }
+  }, [defaultValue]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

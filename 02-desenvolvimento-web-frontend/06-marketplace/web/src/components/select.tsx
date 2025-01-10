@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import Icon from "./icon";
 import { AlertCircle, ChevronDown, ChevronUp, icons, X } from "lucide-react";
@@ -17,6 +17,10 @@ export const Select = ({ label, icon, options, error, onChange, value = null }: 
   const [selected, setSelected] = useState<string | null>(value);
 
   const labelSelected = options.find((option) => option.value === selected)?.label;
+
+  useEffect(() => {
+    setSelected(value);
+  }, [value])
 
   return (
     <div className="relative font-poppins">
@@ -43,7 +47,7 @@ export const Select = ({ label, icon, options, error, onChange, value = null }: 
           {isOpen ? <ChevronUp className="w-6 h-6 text-grayscale-300" /> : <ChevronDown className="w-6 h-6 text-grayscale-300" />}
         </div>
         {isOpen && (
-          <ul className="absolute w-full mt-2 py-1 bg-white max-h-60 text-body-sm font-poppins drop-shadow-md rounded-md overflow-auto">
+          <ul className="absolute w-full mt-2 py-1 bg-white max-h-[200px] text-body-sm font-poppins drop-shadow-md rounded-md overflow-auto">
             {options.map((option, index) => (
               <li
                 key={index}

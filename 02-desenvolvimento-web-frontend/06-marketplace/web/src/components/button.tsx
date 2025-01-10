@@ -9,10 +9,12 @@ const buttonVariants = cva(
         default: 'bg-orange-base text-shape-white hover:bg-orange-dark',
         outline:
           'border border-orange-base text-orange-base bg-transparent hover:border-orange-dark hover:text-orange-dark',
+        text: 'text-orange-base hover:text-orange-dark hover:bg-shape-shape',
       },
       size: {
         lg: 'h-14 px-5',
         default: 'h-10 px-4',
+        sm: 'h-6 px-1 rounded-md'
       },
     },
     defaultVariants: {
@@ -30,7 +32,7 @@ export interface ButtonProps
 
 function Button({ className, variant, size, buttonRef, ...props }: ButtonProps) {
   return (
-    <button ref={buttonRef} className={cn(buttonVariants({ variant, size, className }))} {...props} />
+    <button ref={buttonRef} className={cn(buttonVariants({ variant, size, className, }))} {...props} />
   )
 }
 
